@@ -7,7 +7,7 @@ def faceRecognition(imgLoc):
     demo_img_bgr = faceRegLib.load_image_file(imgLoc)
     demo_img_rgb = cv2.cvtColor(demo_img_bgr,cv2.COLOR_BGR2RGB)
     demo_faceCurFrame = faceRegLib.face_locations(demo_img_rgb)
-    demo_train_encode = faceRegLib.face_encodings(demo_img_rgb, demo_faceCurFrame)[0]
+    demo_train_encode = faceRegLib.face_encodings(demo_img_rgb, demo_faceCurFrame)
 
 
     face_cascade = cv2.CascadeClassifier(r"C:\Users\LENOVO\OneDrive\Desktop\idp\haarcascade_frontalface_default.xml")
